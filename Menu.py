@@ -8,23 +8,27 @@ class Menu:
   
   def start(self):
     while(self.entrada != "exit"):   
+
+      self.pet.tempo()
+
       print("Para interagir, digite:")
       print("1 - Para ouvir o Pet")
       print("2 - Para alimentar o Pet")
       print("3 - Para brincar com o Pet")
       
-      opcao = input()
+      print(self.pet.humor)
       
-      if opcao == "1":
+      self.entrada = input()
+      
+      if self.entrada == "1":
         self.pet.falar()
-      elif opcao == "2":
+      elif self.entrada == "2":
         self.pet.alimentar()
-      elif opcao == "3":
+      elif self.entrada == "3":
         self.pet.brincar()
       else: 
         print("Opção inválida")
-        
-      self.entrada = input()
+
     
-  def finish(): 
+  def finish(self): 
     print("Tchau!")
